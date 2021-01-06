@@ -1,0 +1,175 @@
+body {
+    background: #141414;
+    z-index:0;
+}
+
+html{
+    background: #141414;
+}
+.navBar {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    color: white;
+    font-family: montserrat;
+}
+
+.logo {
+    z-index: 2;
+    align-self: center;
+    padding-left: 1em;
+    padding-top: 1em;
+    width:300px;
+}
+.logo a img{
+	width:300px;
+}	
+
+.menuItems {
+    z-index: 2;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: montserrat-bold;
+    font-size: larger;
+
+}
+.menuItems > div{
+    padding-right: 1em;
+    z-index: 2;
+    opacity: 0.6;
+    justify-self:center;
+    align-self: center;
+    text-align: center;
+    font-family:montserrat-bold;
+    transition: font-family 0.2s ;
+    transition: opacity 0.2s;
+}
+.menuItems > div.active{
+    z-index: 2;
+    font-family: montserrat-bold, sans-serif;
+    opacity: 1;
+}
+
+.hamburgerButton{
+    display:none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 2;
+    align-self: center;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+.menuItems > div:hover{
+    z-index: 2;
+    /*font-size: 110%;*/
+    font-family:montserrat-bold;
+    transition: font-family 0.2s ;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.socials {
+    z-index: 2;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.socials > div{
+    z-index: 2;
+    padding-right: 1em;
+}
+
+/*TOOL TIPS*/
+.tooltip {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    z-index: 2;
+    visibility: hidden;
+    width: 120px;
+
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1600px){
+    /*For Mobile only*/
+    .logo {
+        width:200px;
+        align-self: flex-start;
+        justify-self: start;
+        padding-left:0;
+        padding-top:0em;
+
+    }
+
+    .socials{
+        position: fixed;
+        right :0;
+        bottom: 0;
+        padding: 1em;
+    }
+
+    .tooltip .tooltiptext {
+        top: -100%;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+    /*For Mobile only*/
+    .logo {
+        width:200px;
+    }
+    .menuItems{
+        display: none;
+        align-self: center;
+        font-size: medium;
+        margin-right:1em;
+    }
+    .menuItems > div{
+
+        justify-self: end;
+        align-self:flex-end;
+        padding:1em;
+
+        text-align: right;
+
+    }
+
+    .hamburgerButton{
+        display: block;
+    }
+}

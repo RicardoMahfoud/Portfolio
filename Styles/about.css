@@ -1,0 +1,15 @@
+footer p{
+    display: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+@media screen and (max-width: 1600px){
+    /*For Mobile only*/
+    footer{
+        position: sticky;
+        bottom: 0;
+    }
+    footer p{
+        display: inherit;
+    }
+}

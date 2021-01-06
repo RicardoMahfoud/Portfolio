@@ -1,0 +1,22 @@
+.centered{
+	text-align: center;
+	margin: 10vh auto;
+}
+.centered p{
+	margin: 50px;
+}
+.centered a {
+	background-color: #1cb836;
+	color: white;
+	padding: 1em 1.5em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.centered a:hover {
+	background-color: #08ff31;
+	color:black;
+}
+
+.centered a:active {
+	background-color: red;
+}
